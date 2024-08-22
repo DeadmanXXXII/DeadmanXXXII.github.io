@@ -12,10 +12,12 @@ body {
     line-height: 1.6;
 }
 
+/* Header Section */
 header {
     position: relative;
     text-align: center;
     color: white;
+    padding-bottom: 20px; /* Add space below the header */
 }
 
 .banner {
@@ -25,43 +27,38 @@ header {
 }
 
 .header-content {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
     padding: 20px;
     border-radius: 10px;
 }
 
-.header-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.header-content h2 {
-    font-size: 1.8em;
+/* Carousel Styles */
+.carousel-container {
+    padding-top: 50px; /* Adds space above the carousel */
+    padding-bottom: 0; /* Ensures no extra space below */
 }
 
 .carousel {
-    margin: 20px auto;
     overflow: hidden;
     position: relative;
+    max-width: 100%;
 }
 
 .carousel-wrapper {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-behavior: smooth;
+    gap: 15px; /* Space between items */
 }
 
 .carousel-item {
     min-width: 200px;
-    margin-right: 15px;
     border-radius: 10px;
     height: auto;
 }
 
+/* About Section */
 .about, .products, .newsletter, .contact {
     padding: 20px;
     background: #1e1e1e;
@@ -76,6 +73,7 @@ header {
     padding: 0 20px;
 }
 
+/* About Section Styles */
 .about-content p {
     margin-bottom: 20px;
 }
@@ -102,6 +100,7 @@ header {
     margin-left: 15px;
 }
 
+/* Product Grid Styles */
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -130,6 +129,7 @@ header {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
+/* Newsletter Styles */
 .newsletter form {
     display: flex;
     flex-direction: column;
@@ -159,6 +159,7 @@ header {
     background: #0056b3;
 }
 
+/* Contact Section Styles */
 .contact a {
     color: #007bff;
     text-decoration: none;
@@ -168,10 +169,52 @@ header {
     text-decoration: underline;
 }
 
+/* Footer Styles */
 footer {
     background: #1e1e1e;
     color: #e0e0e0;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
+}
+
+/* Responsive Design */
+
+/* Medium Devices (Tablets) */
+@media (max-width: 768px) {
+    .header-content {
+        font-size: 1.5em;
+    }
+
+    .product-item {
+        width: calc(50% - 20px);
+    }
+
+    .carousel-item {
+        min-width: 150px;
+    }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 576px) {
+    .header-content {
+        font-size: 1.2em;
+    }
+
+    .product-item {
+        width: calc(100% - 20px);
+    }
+
+    .carousel-item {
+        min-width: 100px;
+    }
+
+    .about-content li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-content li img {
+        margin-bottom: 10px;
+    }
 }
