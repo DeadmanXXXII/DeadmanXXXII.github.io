@@ -1,40 +1,17 @@
-# TheMadHattersPlayground.com
-My website
-
-/themadhattersplayground.com
-
-├── /images
-
-│   ├── banner.jpg
-
-│   ├── nft.jpg
-
-│   ├── logo.jpg
-
-│   ├── product1.jpg
-
-│   ├── staff1.jpg
-
-│   └── (additional images)
-
-├── /css
-
-│   └── styles.css
-
-├── /js
-
-│   └── script.js
-
-├── /products
-
-│   ├── product1.html
-
-│   ├── product2.html
-
-│   └── (additional product pages)
-
+# TheMadHattersPlayground.com/
+│
 ├── index.html
-
-├── CNAME
-
-└── README.md
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+└── site_pics/
+    ├── 1000004059.png
+    ├── logo/
+    │   └── nft/
+    │       └── logo2 (1).png
+    ├── cybershorts/
+    │   └── purple.png
+    ├── Screenshot_20231128-185028.png
+    ├── cloud and cyber security.jpg
+    └── Screenshot_20231129-220530.png
