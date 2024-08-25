@@ -4,46 +4,46 @@
 
 |-- css/
 
-|   |-- main.css (Global styles)
+|     |-- main.css (Global styles)
 
 |-- js/
 
-|   |-- main.js (Global scripts)
+|     |-- main.js (Global scripts)
 
 |-- products/
 
-|   |-- product1.html
+|     |-- product1.html
 
-|   |-- css/
+|     |-- css/
 
-|   |   |-- product1.css (Specific styles for product1)
+|     |     |-- product1.css (Specific styles for product1)
 
-|   |-- js/
+|     |-- js/
 
-|   |   |-- product1.js (Specific scripts for product1)
+|     |     |-- product1.js (Specific scripts for product1)
 
 |-- subdomains/
 
-|   |-- subdomain1/
+|     |-- subdomain1/
 
-|   |   |-- index.html (Landing page for subdomain1)
+|     |     |-- index.html (Landing page for subdomain1)
 
-|   |   |-- css/
+|     |     |-- css/
 
-|   |   |   |-- subdomain1.css (Specific styles for subdomain1)
+|     |     |     |-- subdomain1.css (Specific styles for subdomain1)
 
-|   |   |-- js/
+|     |     |-- js/
 
-|   |   |   |-- subdomain1.js (Specific scripts for subdomain1)
+|     |     |     |-- subdomain1.js (Specific scripts for subdomain1)
 
-|   |-- subdomain2/
+|       |-- subdomain2/
 
-|   |   |-- index.html (Landing page for subdomain2)
+|       |       |-- index.html (Landing page for subdomain2)
 
-|   |   |-- css/
+|       |       |-- css/
 
-|   |   |   |-- subdomain2.css (Specific styles for subdomain2)
+|       |       |       |-- subdomain2.css (Specific styles for subdomain2)
 
-|   |   |-- js/
+|       |       |-- js/
 
-|   |   |   |-- subdomain2.js (Specific scripts for subdomain2)
+|       |       |       |-- subdomain2.js (Specific scripts for subdomain2)
