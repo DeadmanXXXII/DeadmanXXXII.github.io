@@ -14,29 +14,28 @@ body {
 
 /* Header Section */
 header {
-    position: relative;
     text-align: center;
     color: white;
-    padding-bottom: 20px; /* Add space below the header */
+    margin-bottom: 20px; /* Add space below the header */
 }
 
 .banner {
     width: 100%;
     height: auto;
     display: block;
+    max-height: 500px; /* Restrict height to maintain a good look on desktop */
 }
 
 .header-content {
-    position: relative;
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
     padding: 20px;
     border-radius: 10px;
+    margin: 20px;
 }
 
 /* Carousel Styles */
 .carousel-container {
-    padding-top: 50px; /* Adds space above the carousel */
-    padding-bottom: 0; /* Ensures no extra space below */
+    margin: 20px 0;
 }
 
 .carousel {
@@ -71,11 +70,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* About Section Styles */
-.about-content p {
-    margin-bottom: 20px;
 }
 
 .about-content ul {
@@ -138,83 +132,83 @@ header {
 
 .newsletter input[type="email"] {
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #333;
+    margin-bottom: 15px;
+    border: none;
     border-radius: 5px;
-    background: #222;
-    color: #e0e0e0;
+    width: 100%;
+    max-width: 400px;
 }
 
 .newsletter button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background: #007bff;
+    background-color: #f39c12;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .newsletter button:hover {
-    background: #0056b3;
+    background-color: #e67e22;
 }
 
-/* Contact Section Styles */
+/* Contact Section */
+.contact p {
+    text-align: center;
+    margin: 10px 0;
+}
+
 .contact a {
-    color: #007bff;
+    color: #f39c12;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact a:hover {
-    text-decoration: underline;
+    color: #e67e22;
 }
 
 /* Footer Styles */
 footer {
-    background: #1e1e1e;
-    color: #e0e0e0;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+    color: #999;
     margin-top: 20px;
 }
 
-/* Responsive Design */
-
-/* Medium Devices (Tablets) */
-@media (max-width: 768px) {
-    .header-content {
-        font-size: 1.5em;
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
     }
 
     .product-item {
-        width: calc(50% - 20px);
+        width: 100%;
     }
 
-    .carousel-item {
-        min-width: 150px;
-    }
-}
-
-/* Small Devices (Phones) */
-@media (max-width: 576px) {
     .header-content {
-        font-size: 1.2em;
-    }
-
-    .product-item {
-        width: calc(100% - 20px);
-    }
-
-    .carousel-item {
-        min-width: 100px;
+        padding: 10px;
     }
 
     .about-content li {
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
     }
 
-    .about-content li img {
-        margin-bottom: 10px;
+    .staff-info {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .carousel-item {
+        height: 300px;
+    }
+
+    .carousel-wrapper {
+        justify-content: center;
     }
 }
