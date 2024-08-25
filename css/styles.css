@@ -23,7 +23,7 @@ header {
     width: 100%;
     height: auto;
     display: block;
-    max-height: 300px; /* Restrict height to maintain a good look on desktop */
+    max-height: 200px; /* Restrict height to maintain a good look on desktop */
 }
 
 .header-content {
