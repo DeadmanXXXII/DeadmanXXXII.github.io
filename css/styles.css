@@ -34,6 +34,11 @@ header {
 }
 
 /* Carousel Styles */
+.carousel-container {
+    padding-top: 50px; /* Adds space above the carousel */
+    padding-bottom: 0; /* Ensures no extra space below */
+}
+
 .carousel {
     overflow: hidden;
     position: relative;
