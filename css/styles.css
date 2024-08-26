@@ -10,6 +10,7 @@ body {
     background-color: #121212; /* Dark mode background */
     color: #e0e0e0; /* Dark mode text color */
     line-height: 1.6;
+    border: 2px solid #ccc; /* Border for debugging */
 }
 
 /* Header Section */
@@ -17,6 +18,7 @@ header {
     text-align: center;
     color: white;
     margin-bottom: 20px; /* Add space below the header */
+    border: 1px solid #999; /* Border for debugging */
 }
 
 .banner {
@@ -39,6 +41,7 @@ header {
     overflow: hidden;
     position: relative;
     max-width: 100%;
+    border: 1px solid #999; /* Border for debugging */
 }
 
 .carousel-wrapper {
@@ -61,12 +64,14 @@ header {
     border-radius: 10px;
     margin: 20px auto;
     max-width: 1200px; /* Ensure it stays consistent */
+    border: 1px solid #999; /* Border for debugging */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    border: 2px solid #ccc; /* Border for debugging */
 }
 
 .about-content ul {
@@ -211,6 +216,7 @@ footer {
     border-top: 1px solid #333;
     color: #999;
     margin-top: 20px;
+    border: 1px solid #999; /* Border for debugging */
 }
 
 /* Media Queries for Responsiveness */
@@ -250,4 +256,4 @@ footer {
     .carousel-wrapper {
         justify-content: center;
     }
-}
+        }
