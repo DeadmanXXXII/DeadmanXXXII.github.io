@@ -4,55 +4,49 @@ document.addEventListener("DOMContentLoaded", function() {
     let startX;
     let scrollLeft;
 
-    function handleMouseDown(e) {
+    carouselWrapper.addEventListener("mousedown", (e) => {
         isDown = true;
         carouselWrapper.classList.add("active");
         startX = e.pageX - carouselWrapper.offsetLeft;
         scrollLeft = carouselWrapper.scrollLeft;
-    }
+    });
 
-    function handleMouseLeave() {
+    carouselWrapper.addEventListener("mouseleave", () => {
         isDown = false;
         carouselWrapper.classList.remove("active");
-    }
+    });
 
-    function handleMouseUp() {
+    carouselWrapper.addEventListener("mouseup", () => {
         isDown = false;
         carouselWrapper.classList.remove("active");
-    }
+    });
 
-    function handleMouseMove(e) {
+    carouselWrapper.addEventListener("mousemove", (e) => {
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - carouselWrapper.offsetLeft;
         const walk = (x - startX) * 3;
         carouselWrapper.scrollLeft = scrollLeft - walk;
-    }
+    });
 
-    function handleTouchStart(e) {
+    // Add touch support for mobile devices
+    let touchStartX = 0;
+    let touchScrollLeft = 0;
+
+    carouselWrapper.addEventListener("touchstart", (e) => {
         isDown = true;
-        startX = e.touches[0].pageX - carouselWrapper.offsetLeft;
-        scrollLeft = carouselWrapper.scrollLeft;
-    }
+        touchStartX = e.touches[0].pageX - carouselWrapper.offsetLeft;
+        touchScrollLeft = carouselWrapper.scrollLeft;
+    });
 
-    function handleTouchEnd() {
+    carouselWrapper.addEventListener("touchend", () => {
         isDown = false;
-    }
+    });
 
-    function handleTouchMove(e) {
+    carouselWrapper.addEventListener("touchmove", (e) => {
         if (!isDown) return;
-        e.preventDefault();
         const x = e.touches[0].pageX - carouselWrapper.offsetLeft;
-        const walk = (x - startX) * 3;
-        carouselWrapper.scrollLeft = scrollLeft - walk;
-    }
-
-    carouselWrapper.addEventListener("mousedown", handleMouseDown);
-    carouselWrapper.addEventListener("mouseleave", handleMouseLeave);
-    carouselWrapper.addEventListener("mouseup", handleMouseUp);
-    carouselWrapper.addEventListener("mousemove", handleMouseMove);
-    
-    carouselWrapper.addEventListener("touchstart", handleTouchStart);
-    carouselWrapper.addEventListener("touchend", handleTouchEnd);
-    carouselWrapper.addEventListener("touchmove", handleTouchMove);
+        const walk = (x - touchStartX) * 3;
+        carouselWrapper.scrollLeft = touchScrollLeft - walk;
+    });
 });
