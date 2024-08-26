@@ -84,10 +84,11 @@ header {
 }
 
 .about-content li img {
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    margin-right: 15px;
+    width: 100%;           /* Set width to 100% to match the container */
+    height: 200px;         /* Set height to match product images */
+    object-fit: cover;     /* Ensure the image maintains aspect ratio and covers the area */
+    border-radius: 10px;   /* Match the border radius with product images */
+    margin-right: 15px;    /* Keep the spacing between the image and text */
 }
 
 .staff-info {
