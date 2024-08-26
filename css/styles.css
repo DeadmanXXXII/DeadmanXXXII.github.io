@@ -34,11 +34,8 @@ header {
 }
 
 /* Carousel Styles */
-.carousel-container {
-    margin: 20px 0;
-}
-
 .carousel {
+    margin: 20px 0; /* Ensure there's space above and below the carousel */
     overflow: hidden;
     position: relative;
     max-width: 100%;
@@ -58,12 +55,12 @@ header {
 }
 
 /* About Section */
-.about, .products, .newsletter, .contact {
+.about {
     padding: 20px;
     background: #1e1e1e;
     border-radius: 10px;
     margin: 20px auto;
-    max-width: 1200px; /* Set max-width for consistency */
+    max-width: 1200px; /* Ensure it stays consistent */
 }
 
 .container {
@@ -75,24 +72,44 @@ header {
 .about-content ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between staff members */
 }
 
 .about-content li {
+    background: #1e1e1e; /* Match background color */
+    border: 1px solid #333; /* Border for visual separation */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    width: 200px; /* Adjust width */
+    height: 200px; /* Adjust height */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-content li img {
-    width: 150px;        /* Adjust width */
+    width: 100px;        /* Adjust width */
     height: 100px;       /* Adjust height */
     object-fit: cover;   /* Maintain aspect ratio */
-    border-radius: 10px; /* Match the border radius with product images */
-    margin-right: 15px;  /* Keep the spacing between the image and text */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below the image */
 }
 
-.staff-info {
-    margin-left: 15px;
+.staff-info p {
+    font-size: 0.9em; /* Adjust text size */
+    color: #ccc; /* Text color */
+    margin: 0;
+}
+
+/* Hover effects */
+.about-content li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* Product Grid Styles */
@@ -211,12 +228,17 @@ footer {
     }
 
     .about-content li {
-        flex-direction: column;
-        text-align: center;
+        width: 100%;
+        height: auto; /* Allow height to adjust with content */
     }
 
-    .staff-info {
-        margin-left: 0;
+    .about-content li img {
+        width: 80px;  /* Adjust width for mobile */
+        height: 80px; /* Adjust height for mobile */
+    }
+
+    .staff-info p {
+        font-size: 0.8em; /* Adjust text size for smaller screens */
     }
 }
 
