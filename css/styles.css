@@ -59,15 +59,15 @@ header {
 
 /* About Section */
 .about, .products, .newsletter, .contact {
-    padding: 10px 20px; /* Reduce padding for height control */
+    padding: 20px 20px; /* Reduce padding for height control */
     background: #1e1e1e;
-    border-radius: 10px;
-    margin: 10px auto; /* Reduce margin to shrink the section's height */
-    max-width: 1200px;
+    border-radius: 20px;
+    margin: 20px auto; /* Reduce margin to shrink the section's height */
+    max-width: 800px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -84,15 +84,15 @@ header {
 }
 
 .about-content li img {
-    width: 100px;        /* Reduce the width of the staff image */
-    height: 100px;       /* Reduce the height of the staff image */
+    width: 20px;        /* Reduce the width of the staff image */
+    height: 20px;       /* Reduce the height of the staff image */
     object-fit: cover;   /* Maintain aspect ratio */
     border-radius: 10px; /* Match the border radius with product images */
-    margin-right: 10px;  /* Reduce spacing between the image and text */
+    margin-right: 20px;  /* Reduce spacing between the image and text */
 }
 
 .staff-info {
-    margin-left: 10px; /* Adjusted for smaller image size */
+    margin-left: 15px; /* Adjusted for smaller image size */
     line-height: 1.4;  /* Tighten line height for text */
 }
 
