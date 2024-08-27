@@ -37,7 +37,7 @@ header {
 /* Product Image */
 .product-details img {
     max-width: 100%;
-    height: auto;
+    height: 50px;
     display: block;
     margin: 0 auto 20px;
 }
