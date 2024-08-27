@@ -1,5 +1,17 @@
 /* Chaveiros - Product-Specific Styles */
 
+/* Resize images to fit within the container */
+.container img {
+    max-width: 100%;  /* Ensures the image doesn't overflow the container */
+    height: auto;     /* Maintains the aspect ratio */
+    display: block;
+    margin: 0 auto;   /* Centers the image */
+}
+
+/* Optional: Add padding or margin around the images */
+.container {
+    padding: 10px;    /* Adjust this value for more or less padding */
+}
 /* Basic Styling */
 body {
     font-family: 'Arial', sans-serif;
