@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const hasPaid = confirm("Have you completed the payment?");
 
         if (hasPaid) {
-            window.location.href = "download-link"; // Replace with actual download link
+            window.location.href = "BuyNow.html"; // Replace with actual download link
         } else {
             alert("Please complete the payment before downloading.");
         }
