@@ -1,5 +1,3 @@
-/* labyrinth.css */
-
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -17,13 +15,13 @@ header {
 }
 
 /* Page Container */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #1e1e1e; /* Dark background for container */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.page-container {
+    max-width: 1200px; /* Constrain the content width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding inside the container */
+    background-color: #181818; /* Slightly different background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Shadow effect to lift the container */
 }
 
 /* Product Details Section */
@@ -33,7 +31,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin: 20px auto;
-    max-width: 90%;
+    max-width: 100%; /* Full width of the page container */
 }
 
 /* Product Image */
@@ -78,5 +76,16 @@ a:hover {
 
     .product-details {
         padding: 10px;
+    }
+}
+
+/* Media Queries for Large Screens */
+@media (min-width: 769px) {
+    .container {
+        max-width: 1000px; /* Adjust for larger screens */
+    }
+
+    .product-details {
+        max-width: 800px; /* Limit width for large screens */
     }
 }
