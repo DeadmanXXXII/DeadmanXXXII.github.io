@@ -7,8 +7,9 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    min-height: 100vh; /* Full viewport height */
+    padding-top: 50px; /* Adjust this value to move content down from the top */
 }
 
 /* Header Styles */
@@ -21,9 +22,9 @@ header {
 /* Buy Now Details Section */
 .buy-now-details {
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Adjust as needed */
     text-align: center; /* Center text inside the container */
 }
 
