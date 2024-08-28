@@ -1,54 +1,60 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    const stripe = Stripe('pk_live_51PsRsLH5TV7FZcwUA7OcStM8fSCg17wjdfEOFQxA4A8dkdJns2PUyySZyZ3K0ArmEfKuHVb7Ss47vJglgEq6l0b700zwnli2X0');
-    
-    let clientSecret;
+// Initialize Stripe with your public key
+const stripe = Stripe('pk_live_51PsRsLH5TV7FZcwUA7OcStM8fSCg17wjdfEOFQxA4A8dkdJns2PUyySZyZ3K0ArmEfKuHVb7Ss47vJglgEq6l0b700zwnli2X0');
+
+const appearance = {
+    theme: 'night',
+    variables: { colorPrimaryText: '#e0e0e0', colorPrimary: '#f39c12' }
+};
+const options = {
+    layout: {
+        type: 'accordion',
+        defaultCollapsed: false,
+        radios: true,
+        spacedAccordionItems: false
+    }
+};
+
+// Function to setup Stripe Elements
+async function setupStripe() {
     try {
         const response = await fetch('/.netlify/functions/create-payment-intent', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ amount: 1000 }) // Adjust the amount as needed
+            body: JSON.stringify({ amount: 1000 }) // Example amount
         });
         
-        const data = await response.json();
-        clientSecret = data.clientSecret;
+        const { clientSecret } = await response.json();
+        
+        const elements = stripe.elements({ clientSecret, appearance });
+        const paymentElement = elements.create('payment', options);
+        paymentElement.mount('#payment-element');
     } catch (error) {
-        console.error('Failed to fetch client secret:', error);
-        return;
+        console.error('Error setting up Stripe:', error);
     }
+}
 
-    const appearance = {
-        theme: 'night',
-        variables: { colorPrimaryText: '#e0e0e0', colorPrimary: '#f39c12' }
-    };
+setupStripe();
 
-    const options = {
-        layout: {
-            type: 'accordion',
-            defaultCollapsed: false,
-            radios: true,
-            spacedAccordionItems: false
-        }
-    };
+// Handle payment submission
+const form = document.getElementById('payment-form');
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-    const elements = stripe.elements({ clientSecret, appearance });
-    const paymentElement = elements.create('payment', options);
-    paymentElement.mount('#payment-element');
-
-    const form = document.getElementById('payment-form');
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
+    try {
         const { error } = await stripe.confirmPayment({
             elements,
             confirmParams: {
-                return_url: 'https://your-site.com/success', // Update with your success URL
+                return_url: 'https://the-mad-hatters-playground.netlify.app/success', // Update with your success URL
             },
         });
 
         if (error) {
-            console.error('Payment error:', error.message);
+            // Show error message to your customer
+            console.log(error.message);
         } else {
-            // Handle successful payment
+            // Redirect or show success message
         }
-    });
+    } catch (error) {
+        console.error('Error confirming payment:', error);
+    }
 });
