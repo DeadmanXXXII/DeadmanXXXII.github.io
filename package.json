@@ -1,11 +1,11 @@
 {
-  "name": "@TMHP.com",  // Replace with your project's name
+  "name": "@TMHP.com",
   "version": "1.0.0",
   "scripts": {
     "start": "netlify dev",
     "build": "netlify build"
   },
   "dependencies": {
-    "stripe": "16.8.0"  // Use the latest version; this is an example version
+    "stripe": "16.8.0"
   }
 }
