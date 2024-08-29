@@ -1,5 +1,5 @@
 [build]
-  publish = "public"
+  publish = "."  # Serve files from the root directory
   functions = "netlify/functions"
 
 [[headers]]
