@@ -168,6 +168,42 @@ header {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
+/* Add spacing between products and subdomains section */
+.products {
+    margin-bottom: 40px; /* Adds space below the products section */
+}
+
+/* Subdomains Section Styles */
+.subdomains {
+    margin-bottom: 40px; /* Adds space between subdomains and the newsletter section */
+    text-align: center; /* Center-aligns content */
+}
+
+.subdomains ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.subdomains ul li {
+    margin-bottom: 10px; /* Adds space between links */
+}
+
+/* Make the links in the subdomains section orange */
+.subdomains ul li a {
+    color: #f39c12; /* Orange link color */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Optional: Add underline on hover */
+.subdomains ul li a:hover {
+    text-decoration: underline; /* Adds underline when hovering over link */
+}
+
+/* Newsletter Section Styles */
+.newsletter {
+    padding-top: 20px; /* Adds padding at the top of the newsletter section */
+}
+
 /* Newsletter Styles */
 .newsletter form {
     display: flex;
